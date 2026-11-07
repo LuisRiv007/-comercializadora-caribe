@@ -3,66 +3,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Comercializadora Caribe</title>
-<meta name="theme-color" content="#000000">
-<meta name="description" content="Base de terrenos de Comercializadora Caribe">
+<title>Banco de Terrenos</title>
+<meta name="theme-color" content="#f5f7f4">
+<meta name="description" content="Banco de Terrenos de Comercializadora Caribe">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
 <link rel="apple-touch-icon" href="./icon-192.png">
 <style>
-:root{--bg:#000;--card:#0e0e0e;--line:#2a2a2a;--tx:#fff;--mut:#9b9b9b;--g:#22c55e;--gd:#06280f;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#f5f7f4;--card:#fff;--line:#dde5e0;--ink:#16332d;--mut:#5d716b;--g:#17694f;--gh:#115640;--gt:#e3f1ec;--navy:#1b2a5e;--or:#e9784b;--ort:#fdeee7;--yl:#8a6100;--ylt:#fff3cf;--rd:#b3261e;--rdt:#fdecea;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *,*::before,*::after{box-sizing:inherit}
-html,body{margin:0;background:var(--bg);color:var(--tx);font:18px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%;overscroll-behavior-y:contain}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button{touch-action:manipulation}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%;overscroll-behavior-y:contain}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button{touch-action:manipulation;font:inherit;cursor:pointer}
 #home,.in{max-width:640px;margin:0 auto;padding:16px}
-h1{font-size:24px;margin:4px 0 14px;color:var(--g)}
-.rv{border:2px solid var(--g);border-radius:14px;padding:12px;margin:14px 0 6px}.rv span{color:var(--mut);font-size:15px;display:block}.rv b{font-size:20px}
-.pw{position:relative}.pw input{padding-right:58px}.pb{position:absolute;right:6px;top:10px;width:40px;height:40px;background:var(--gd);color:var(--g);border:0;border-radius:10px;display:flex;align-items:center;justify-content:center}
-h2{font-size:24px;margin:10px 0 4px}
-button{font:inherit;cursor:pointer}
-.btn{background:var(--g);color:#000;border:0;border-radius:12px;padding:14px 18px;font-weight:700;width:100%}
-.ghost{background:transparent;color:var(--g);border:2px solid var(--g);border-radius:12px;padding:12px 16px;font-weight:600}
-.danger{color:#ff6b6b;border-color:#ff6b6b}
-input,select,textarea{width:100%;font:inherit;color:var(--tx);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px;margin:4px 0 12px}
-input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--g);outline-offset:2px}
-textarea{min-height:80px;resize:vertical}
-label{color:var(--mut);font-size:15px}
-.bar{display:flex;gap:10px;margin:14px 0 4px}
-.bar input{margin:0;flex:1}.bar .pw{flex:1;min-width:0}.bar .pb{top:7px}.bar .btn{width:auto;white-space:nowrap;padding:0 16px}#q{font-size:16px}#q::-webkit-search-cancel-button{-webkit-appearance:none}.bd{position:absolute;top:-5px;right:-5px;background:var(--g);color:#000;font-size:12px;font-weight:700;border-radius:10px;min-width:18px;height:18px;padding:0 4px;line-height:18px;text-align:center}.hd{display:flex;align-items:flex-start;gap:10px}.hd h1{flex:1}.ib{background:transparent;border:0;color:var(--mut);width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:10px;margin-top:2px}.rem{position:relative;border:2px solid #f5b942;color:#f5b942;border-radius:12px;padding:10px 42px 10px 12px;margin:0 0 12px;font-size:16px}.rem-close{position:absolute;right:7px;top:6px;width:30px;height:30px;border:0;border-radius:8px;background:transparent;color:#f5b942;font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center;padding:0}.hint{color:var(--mut);font-size:15px}#bl .ghost{padding:10px 6px;font-size:16px}
-#fp{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
-#fp[hidden]{display:none}
+h1,h2,h3{margin:0}h2{font-size:24px;color:var(--navy);margin:6px 0 12px}h3{font-size:19px;color:var(--navy);margin-bottom:12px}
+.hint{color:var(--mut);font-size:15px;margin:2px 0 10px}
+.top{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 1px 3px rgba(22,51,45,.07)}
+.logo{width:64px;height:64px;border-radius:16px;object-fit:contain;background:#f9fbfa;border:1px solid var(--line);flex:none}
+.ttl{flex:1;min-width:0}.ttl h1{font-size:22px;color:var(--navy);line-height:1.15}.ttl small{display:block;color:var(--g);font-weight:700;letter-spacing:.04em;font-size:12px;margin-top:4px}
+.ib{background:transparent;border:0;color:var(--navy);width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:12px;flex:none}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.tile{display:flex;align-items:baseline;gap:10px;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:10px 14px;text-align:left;color:var(--ink)}
+.tile b{font-size:28px;line-height:1;color:var(--navy)}.tile span{font-size:16px;line-height:1.2}.tile.all{grid-column:1/-1}
+.t0 b{color:var(--g)}.t1 b{color:#c4572a}.t2 b{color:var(--yl)}.t3 b{color:var(--navy)}
+.tile.on{border-color:var(--g);background:var(--gt)}
+.btn{background:var(--g);color:#fff;border:0;border-radius:14px;padding:14px 18px;font-weight:700;width:100%;min-height:50px}
+.btn:active{background:var(--gh)}.btn.rd{background:var(--rd)}
+.ghost{background:var(--card);color:var(--g);border:2px solid var(--g);border-radius:14px;padding:12px 16px;font-weight:600;min-height:50px}
+.ghost.danger{color:var(--rd);border-color:var(--rd)}
+a.ghost{display:block;text-align:center;text-decoration:none}
+.full{width:100%}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:#fff;border:2px solid #c9d4ce;border-radius:12px;padding:12px;margin:6px 0 14px}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid rgba(23,105,79,.35);outline-offset:1px;border-color:var(--g)}
+textarea{min-height:84px;resize:vertical}
+label{display:block;font-weight:600;font-size:16px;color:var(--ink)}
+.bar{display:flex;gap:10px;margin:0 0 4px}
+.pw{position:relative}.pw input{padding-right:58px}.pb{position:absolute;right:6px;top:9px;width:42px;height:42px;background:var(--gt);color:var(--g);border:0;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.bar input{margin:0}.bar .pw{flex:1;min-width:0}.bar .pb{top:6px}.bar .btn{width:auto;white-space:nowrap;padding:0 18px}#q{font-size:16px;height:54px}#q::-webkit-search-cancel-button{-webkit-appearance:none}
+.bd{position:absolute;top:-5px;right:-5px;background:var(--or);color:#fff;font-size:12px;font-weight:700;border-radius:10px;min-width:18px;height:18px;padding:0 4px;line-height:18px;text-align:center}
+.rem{position:relative;background:var(--ylt);border:1px solid #ecd48a;color:#5c4300;border-radius:14px;padding:12px 44px 12px 14px;margin:14px 0 0;font-size:16px}
+.rem .ghost{margin-top:8px;padding:8px 14px;min-height:42px}
+.rem-close{position:absolute;right:6px;top:6px;width:34px;height:34px;border:0;border-radius:8px;background:transparent;color:#5c4300;font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;padding:0}
+#fp,.sec{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:0 0 14px;box-shadow:0 1px 3px rgba(22,51,45,.05)}
+#fp{margin:10px 0}#fp[hidden]{display:none}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
-.chip{background:transparent;color:var(--tx);border:2px solid var(--line);border-radius:20px;padding:8px 14px}
-.chip.on{background:var(--g);color:#000;border-color:var(--g);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.chip{background:#fff;color:var(--ink);border:2px solid #c9d4ce;border-radius:22px;padding:9px 14px}
+.chip.on{background:var(--g);color:#fff;border-color:var(--g);font-weight:600}
 #cnt{color:var(--mut);font-size:15px;margin:10px 2px}
-.card{background:var(--card);border:2px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:14px;overflow:hidden;cursor:pointer;box-shadow:0 1px 3px rgba(22,51,45,.07)}
 .card:active{border-color:var(--g)}
-.cov{width:100%;height:170px;object-fit:cover;display:block;background:var(--gd)}
-.nop{height:170px;display:flex;align-items:center;justify-content:center;background:var(--gd);color:var(--g)}
-.cb{padding:12px 14px}
-.cb b{font-size:20px;display:block}
-.cb span{color:var(--mut);font-size:16px}
-.pr{color:var(--g);font-weight:700;font-size:19px;margin-top:4px}
-.st{display:inline-block;border-radius:10px;padding:2px 10px;font-size:14px;font-weight:700;margin-top:6px;background:var(--g);color:#000}
-.s1,.s2{background:#f5b942}.s3{background:#555;color:#fff}
+.cov{width:100%;height:170px;object-fit:cover;display:block;background:var(--gt)}
+.nop{height:170px;display:flex;align-items:center;justify-content:center;background:var(--gt);color:var(--g);font-weight:600}
+.cb{padding:12px 16px 14px}.cb b{font-size:20px;display:block;color:var(--navy)}.cb span{color:var(--mut);font-size:16px}
+.pr{color:var(--g);font-weight:700;font-size:19px;margin-top:4px}.pr.big{font-size:26px;margin-top:8px}
+.st{display:inline-block;border-radius:20px;padding:3px 12px;font-size:14px;font-weight:700;margin-top:8px}
+.s0{background:var(--gt);color:var(--g)}.s1{background:var(--ort);color:#b24a1f}.s2{background:var(--ylt);color:var(--yl)}.s3{background:#e6e9f3;color:var(--navy)}
 .empty{text-align:center;color:var(--mut);padding:40px 10px}
 .ov{position:fixed;inset:0;background:var(--bg);overflow:auto;display:none;z-index:5;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 .ov.on{display:block}
-.dimg{width:100%;max-height:300px;object-fit:cover;border-radius:14px;margin-top:10px}
-.row{border-top:1px solid var(--line);padding:10px 0}
-.row span{color:var(--mut);font-size:15px}
-.row p{margin:2px 0;white-space:pre-wrap}
-.tel,.map{display:inline-block;background:var(--gd);color:var(--g);border:2px solid var(--g);border-radius:12px;padding:10px 14px;margin:4px 8px 4px 0;text-decoration:none;font-weight:600}
-.acts{display:grid;gap:10px;margin:18px 0 30px}.r2{display:flex;gap:10px}.r2>*{flex:1;text-align:center}.acts .map{margin:0;padding:12px 8px;font-size:17px}
-.pvs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0 10px}.th{position:relative}.th img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;display:block}.th button{position:absolute;top:4px;right:4px;background:rgba(0,0,0,.75);color:#fff;border:0;border-radius:50%;width:32px;height:32px;font-size:20px;line-height:1}.th i{position:absolute;left:4px;bottom:4px;background:var(--g);color:#000;font-style:normal;font-size:13px;font-weight:700;border-radius:8px;padding:1px 8px}.gal{display:flex;gap:8px;overflow-x:auto;margin-top:10px}.gal img{height:220px;width:auto;max-width:85%;border-radius:14px;object-fit:cover;flex:none}
-.ck label{display:flex;align-items:center;gap:12px;color:var(--tx);font-size:18px;margin-bottom:14px}.ck input,.nb input{width:26px;height:26px;margin:0;flex:none;accent-color:var(--g)}.th.off img{opacity:.25}
-#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--g);color:#000;font-weight:700;padding:12px 20px;border-radius:12px;display:none;z-index:9;max-width:90%}
+.tb{margin-bottom:6px}.back{display:inline-flex;align-items:center;gap:6px;background:transparent;border:0;color:var(--g);font-weight:700;padding:8px 4px;min-height:44px}
+.row{border-top:1px solid var(--line);padding:10px 0}.row:first-child{border-top:0;padding-top:0}
+.row span{color:var(--mut);font-size:15px}.row p{margin:2px 0;white-space:pre-wrap}
+.rv{background:var(--ort);border:1px solid #f3c9b7;border-radius:14px;padding:12px;margin:0 0 10px}.rv span{color:#8a3d1a;font-size:15px;display:block}.rv b{font-size:20px}
+.tel,.map{display:inline-block;background:var(--gt);color:var(--g);border:2px solid var(--g);border-radius:12px;padding:10px 14px;margin:4px 8px 4px 0;text-decoration:none;font-weight:600}
+.acts{display:grid;gap:10px;margin:0 0 30px}.r2{display:flex;gap:10px}.r2>*{flex:1;text-align:center}.acts .map{margin:0;padding:12px 8px;font-size:17px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:14px;min-height:50px}
+.pvs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0 12px}.th{position:relative}.th img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;display:block}
+.th button{position:absolute;top:4px;right:4px;background:rgba(22,51,45,.8);color:#fff;border:0;border-radius:50%;width:32px;height:32px;font-size:20px;line-height:1}
+.th i{position:absolute;left:4px;bottom:4px;background:var(--g);color:#fff;font-style:normal;font-size:13px;font-weight:700;border-radius:8px;padding:1px 8px}.th.off img{opacity:.3}
+.gal{display:flex;gap:8px;overflow-x:auto}.gal img{height:230px;width:auto;max-width:88%;border-radius:16px;object-fit:cover;flex:none}
+.ck label{display:flex;align-items:center;gap:12px;font-size:18px;margin-bottom:14px}.ck input,.nb input{width:26px;height:26px;margin:0;flex:none;accent-color:var(--g)}
+.fl{display:flex;gap:10px;align-items:center}.fl>input{flex:1;min-width:0}.fl select{width:auto;max-width:42%}.fl>.nb{margin-bottom:8px}.nb{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.rsvbox{background:var(--ort);border:1px solid #f3c9b7;border-radius:14px;padding:12px;margin:0 0 14px}
+.sv{position:sticky;bottom:0;display:flex;gap:10px;padding:14px 0 16px;background:linear-gradient(rgba(245,247,244,0),var(--bg) 35%)}.sv .ghost{flex:0 0 36%}
+.mod{position:fixed;inset:0;background:rgba(22,51,45,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.mod.on{display:flex}
+.mb{background:#fff;border-radius:20px;padding:20px;max-width:460px;width:100%;max-height:90vh;overflow:auto}.mb p{margin:0 0 14px}
+.opt{display:block;width:100%;text-align:left;background:var(--gt);border:2px solid var(--g);border-radius:14px;padding:14px;margin-bottom:10px;color:var(--ink)}
+.opt b{display:block;color:var(--navy);font-size:18px}.opt em{font-style:normal;background:var(--g);color:#fff;border-radius:10px;padding:1px 8px;font-size:13px;margin-left:6px}.opt span{display:block;font-size:16px;margin-top:4px}
+#bl .ghost{padding:10px 6px;font-size:16px;min-height:46px}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:#fff;font-weight:600;padding:12px 20px;border-radius:12px;display:none;z-index:30;max-width:90%;text-align:center}
 </style>
 </head>
 <body>
 <div id="home">
-  <div class="hd"><h1>Base de Comercializadora Caribe</h1><button class="ib" onclick="openBk()" aria-label="Copias de seguridad"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg></button></div>
+  <div class="top"><img class="logo" src="./logo.png" alt="Logo de Comercializadora Caribe"><div class="ttl"><h1>Banco de Terrenos</h1><small>COMERCIALIZADORA CARIBE</small></div><button class="ib" onclick="openBk()" aria-label="Copias de seguridad"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button></div>
   <div id="rem" class="rem" hidden></div>
+  <div class="stats" id="stats"></div>
   <div class="bar"><div class="pw"><input id="q" type="search" placeholder="Buscar por nombre" oninput="render()"><button type="button" class="pb" id="fb" aria-label="Filtros" onclick="togF()"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54z"/></svg><span class="bd" id="fbd" hidden></span></button></div><button class="btn" onclick="openForm()">+ Agregar</button></div>
   <div id="fp" hidden>
     <label>Zona</label><select id="fz" onchange="render()"></select>
@@ -71,7 +96,7 @@ label{color:var(--mut);font-size:15px}
     <label>Nombre del propietario</label><input id="fo" oninput="render()">
     <div class="two"><div><label>Precio mínimo</label><input id="fmin" type="text" inputmode="numeric" oninput="fmtN(this);render()"></div><div><label>Precio máximo</label><input id="fmax" type="text" inputmode="numeric" oninput="fmtN(this);render()"></div></div>
     <label>Características</label><div class="chips" id="fch"></div>
-    <button class="ghost" onclick="clr()">Quitar filtros</button>
+    <button class="ghost full" style="margin-top:8px" onclick="clr()">Quitar filtros</button>
   </div>
   <div id="cnt"></div>
   <main id="list"></main>
@@ -80,49 +105,62 @@ label{color:var(--mut);font-size:15px}
 <div class="ov" id="det"></div>
 
 <div class="ov" id="frm"><div class="in">
-  <button class="ghost" onclick="closeOv()">Cancelar</button>
+  <div class="tb"><button class="back" onclick="closeOv()"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Cancelar</button></div>
   <h2 id="ft2">Nuevo terreno</h2>
-  <label>Fotos (toca una para ponerla de portada)</label><div class="pvs" id="pvs"></div>
-  <input type="file" id="ph" accept="image/*" multiple hidden>
-  <button class="ghost" style="width:100%;margin:8px 0 14px" onclick="document.getElementById('ph').click()">Agregar fotos</button>
-  <label>Nombre del terreno</label><input id="f_name">
-  <label>Zona</label><input id="f_zone" list="zl" placeholder="Ej: Zona norte"><datalist id="zl"></datalist>
-  <label>Tipo de propiedad</label><select id="f_type"></select>
-  <label>Estado</label><select id="f_state"></select>
-  <div id="rsv" hidden style="border:2px solid var(--g);border-radius:14px;padding:12px;margin:0 0 14px"><label>Datos del comprador</label><input id="f_buyer" placeholder="Nombre del comprador"><input id="f_bphone" type="tel" inputmode="tel" placeholder="Teléfono del comprador"><input id="f_bprice" type="text" inputmode="numeric" oninput="fmtN(this)" placeholder="Precio acordado" style="margin-bottom:0"></div>
-  <label>Características</label><div class="chips" id="fch2"></div>
-  <label>Precio</label><div style="display:flex;gap:14px;align-items:center"><input id="f_price" type="text" inputmode="numeric" oninput="fmtN(this)" style="flex:1"><label class="nb" style="display:flex;align-items:center;gap:8px;color:var(--tx);margin-bottom:8px"><input type="checkbox" id="f_neg">Negociable</label></div>
-  <label>Tamaño</label><div style="display:flex;gap:8px"><input id="f_size" type="number" step="any" inputmode="decimal" oninput="sizeIn()" style="flex:1"><select id="f_unit" onchange="unitCh()" style="width:auto"><option value="m²">m²</option><option value="km²">km²</option><option value="v²">v²</option><option value="mnz">Manzanas (mnz)</option><option value="acres">Acres</option></select></div>
-  <label>Dirección específica</label><input id="f_address">
-  <label>Ubicación exacta: marca el punto en Maps, toca Compartir, copia el enlace y pégalo aquí</label>
-  <div style="margin:4px 0"><a class="ghost" id="pk" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps" onclick="pick()" style="display:block;text-align:center;text-decoration:none">Elegir en Maps</a></div>
-  <div class="pw"><input id="f_map" placeholder="Enlace de la ubicación"><button type="button" class="pb" aria-label="Pegar enlace" onclick="paste()"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></button></div>
-  <label>Propietario</label><input id="f_owner">
-  <label>Teléfonos importantes (uno por línea)</label><textarea id="f_phones"></textarea>
-  <label>Asuntos legales</label><textarea id="f_legal"></textarea>
-  <label>Notas generales</label><textarea id="f_notes"></textarea>
-  <button class="btn" style="margin:6px 0 30px" onclick="saveForm()">Guardar terreno</button>
+  <div class="sec"><h3>Fotos</h3><p class="hint">Toca una foto para ponerla de portada.</p><div class="pvs" id="pvs"></div><input type="file" id="ph" accept="image/*" multiple hidden><button class="ghost full" onclick="document.getElementById('ph').click()">Agregar fotos</button></div>
+  <div class="sec"><h3>Información del terreno</h3>
+    <label for="f_name">Nombre del terreno</label><input id="f_name">
+    <label for="f_zone">Zona</label><input id="f_zone" list="zl" placeholder="Ej: Zona norte"><datalist id="zl"></datalist>
+    <label for="f_type">Tipo de propiedad</label><select id="f_type"></select>
+    <label for="f_state">Estado</label><select id="f_state"></select>
+    <div id="rsv" class="rsvbox" hidden><label>Datos del comprador</label><input id="f_buyer" placeholder="Nombre del comprador"><input id="f_bphone" type="tel" inputmode="tel" placeholder="Teléfono del comprador"><input id="f_bprice" type="text" inputmode="numeric" oninput="fmtN(this)" placeholder="Precio acordado" style="margin-bottom:0"></div>
+    <label>Características</label><div class="chips" id="fch2"></div>
+  </div>
+  <div class="sec"><h3>Ubicación</h3>
+    <label for="f_address">Dirección específica</label><input id="f_address">
+    <label>Ubicación exacta en Google Maps</label><p class="hint">Marca el punto en Maps, toca Compartir, copia el enlace y pégalo aquí.</p>
+    <a class="ghost" id="pk" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps" onclick="pick()">Elegir en Maps</a>
+    <div class="pw" style="margin-top:10px"><input id="f_map" placeholder="Enlace de la ubicación" style="margin-bottom:0"><button type="button" class="pb" aria-label="Pegar enlace" onclick="paste()"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></button></div>
+  </div>
+  <div class="sec"><h3>Dimensiones y precio</h3>
+    <label for="f_size">Tamaño</label><div class="fl"><input id="f_size" type="number" step="any" inputmode="decimal" oninput="sizeIn()"><select id="f_unit" onchange="unitCh()"><option value="m²">m²</option><option value="km²">km²</option><option value="v²">v²</option><option value="mnz">mnz</option><option value="acres">Acres</option></select></div>
+    <label for="f_price">Precio</label><div class="fl"><input id="f_price" type="text" inputmode="numeric" oninput="fmtN(this)"><label class="nb"><input type="checkbox" id="f_neg">Negociable</label></div>
+  </div>
+  <div class="sec"><h3>Contacto</h3>
+    <label for="f_owner">Propietario</label><input id="f_owner">
+    <label for="f_phones">Teléfonos importantes (uno por línea)</label><textarea id="f_phones"></textarea>
+  </div>
+  <div class="sec"><h3>Notas</h3>
+    <label for="f_legal">Asuntos legales</label><textarea id="f_legal"></textarea>
+    <label for="f_notes">Notas generales</label><textarea id="f_notes"></textarea>
+  </div>
+  <div class="sv"><button class="ghost" onclick="closeOv()">Cancelar</button><button class="btn" onclick="saveForm()">Guardar terreno</button></div>
 </div></div>
+
 <div class="ov" id="pdf"><div class="in">
-  <button class="ghost" onclick="closePdf()">Cancelar</button>
+  <div class="tb"><button class="back" onclick="closePdf()"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Cancelar</button></div>
   <h2>PDF para cliente</h2>
-  <label>Título y nombre del archivo</label><input id="p_name">
-  <label>Descripción para este cliente (opcional)</label><textarea id="p_dtx" placeholder="Escribe aquí lo que quieras decirle a este cliente"></textarea>
-  <label>Incluir en el PDF</label>
-  <div class="ck" style="margin-top:8px"><label><input type="checkbox" id="p_price">Precio</label><label><input type="checkbox" id="p_addr">Dirección específica</label><label><input type="checkbox" id="p_map">Enlace de Google Maps</label></div>
-  <label>Fotos (toca una para quitarla o ponerla). La primera va grande en la portada.</label><div class="pvs" id="p_ph"></div>
-  <p style="color:var(--mut);font-size:15px">Siempre se incluyen tipo, zona, tamaño, características y el contacto de Melvin Rivera.</p>
-  <button class="btn" id="p_go" style="margin:6px 0 30px" onclick="makePdf()">Descargar o compartir PDF</button>
+  <div class="sec"><label for="p_name">Título y nombre del archivo</label><input id="p_name"><label for="p_dtx">Descripción para este cliente (opcional)</label><textarea id="p_dtx" placeholder="Escribe aquí lo que quieras decirle a este cliente" style="margin-bottom:0"></textarea></div>
+  <div class="sec"><h3>Incluir en el PDF</h3><div class="ck"><label><input type="checkbox" id="p_price">Precio</label><label><input type="checkbox" id="p_addr">Dirección específica</label><label><input type="checkbox" id="p_map">Enlace de Google Maps</label></div><p class="hint" style="margin:0">Siempre se incluyen tipo, zona, tamaño, características y el contacto de Melvin Rivera.</p></div>
+  <div class="sec"><h3>Fotos</h3><p class="hint">Toca una para quitarla o ponerla. La primera va grande en la portada.</p><div class="pvs" id="p_ph" style="margin-bottom:0"></div></div>
+  <button class="btn" id="p_go" onclick="makePdf()">Descargar o compartir PDF</button><div style="height:30px"></div>
 </div></div>
+
 <div class="ov" id="bk"><div class="in">
-  <button class="ghost" onclick="closeBk()">Volver</button>
+  <div class="tb"><button class="back" onclick="closeBk()"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Volver</button></div>
   <h2>Copias de seguridad</h2>
-  <p class="hint">Guarda el archivo fuera del celular (correo, Drive o WhatsApp) para no perder nada.</p>
-  <div class="r2" style="margin:12px 0"><button class="btn" onclick="saveBk()">Guardar copia</button><button class="ghost" onclick="$('bf').click()">Cargar copia</button></div>
+  <div class="sec"><p style="margin:0 0 8px">Una copia es un archivo con <b>todos tus terrenos y fotos</b> de este momento. Si algún día se pierden los datos del celular, cargas ese archivo y todo vuelve.</p><p class="hint">Guárdalo fuera del celular (Drive, correo o WhatsApp).</p>
+    <div class="r2"><button class="btn" onclick="saveBk()">Guardar copia</button><button class="ghost" onclick="$('bf').click()">Cargar copia</button></div>
+    <p class="hint" style="margin:10px 0 0"><b>Guardar copia</b> crea el archivo. <b>Cargar copia</b> te deja elegir un archivo guardado antes, y te pregunta cómo quieres cargarlo.</p></div>
   <input type="file" id="bf" accept=".json,application/json" hidden>
-  <label>Copias guardadas en esta página</label><div id="bl"></div>
+  <div class="sec"><h3>Copias guardadas en esta página</h3><p class="hint">Aquí quedan solo las últimas 5, para restaurar rápido. Si se borran los datos del navegador, estas también se pierden; por eso guarda siempre el archivo fuera del celular.</p><div id="bl"></div></div>
 </div></div>
-<div class="ov" id="rs" style="z-index:8"><div class="in"><h2>Cargar copia</h2><p id="rst"></p><div class="acts"><button class="btn" onclick="doRs('rep')">Reemplazar todo</button><button class="ghost" onclick="doRs('add')">Agregar a lo que ya hay</button><button class="ghost" onclick="$('rs').classList.remove('on')">Cancelar</button></div></div></div>
+
+<div class="mod" id="rs"><div class="mb"><h2>¿Cómo quieres cargar esta copia?</h2><p id="rst"></p>
+  <button class="opt" onclick="doRs('add')"><b>Agregar a lo que ya hay<em>Recomendado</em></b><span>Mantiene tus terrenos actuales y suma los de la copia que no tengas. No se duplican.</span></button>
+  <button class="opt" onclick="doRs('rep')"><b>Reemplazar todo</b><span>Borra los terrenos actuales y deja solo los de la copia. Antes guardo una copia automática de lo que tienes ahora, por si te arrepientes.</span></button>
+  <button class="ghost full" onclick="$('rs').classList.remove('on')">Cancelar</button></div></div>
+<div class="mod" id="cf"><div class="mb"><h2 id="cf_t"></h2><p id="cf_x"></p><div class="r2"><button class="ghost" onclick="cfNo()">No, cancelar</button><button class="btn rd" id="cf_ok" onclick="cfYes()">Sí, eliminar</button></div></div></div>
 <div id="toast"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -165,7 +203,7 @@ function remind(){
 function dismissRem(){try{localStorage.setItem('remDismiss',String(Date.now()))}catch(e){}$('rem').hidden=true}
 function openBk(){drawBk();$('bk').classList.add('on');$('bk').scrollTop=0}
 function closeBk(){$('bk').classList.remove('on')}
-function drawBk(){$('bl').innerHTML=bks.length?bks.slice().reverse().map(function(b){return'<div class="row"><b>'+fdate(b.date)+'</b>'+(b.tag?' <span>('+esc(b.tag)+')</span>':'')+'<p>'+b.count+' terrenos - '+fmtSz(b.size)+'</p><div class="r2"><button class="ghost" data-a="rs" data-id="'+b.id+'">Restaurar</button><button class="ghost" data-a="fl" data-id="'+b.id+'">Guardar archivo</button><button class="ghost danger" data-a="dl" data-id="'+b.id+'">Borrar</button></div></div>'}).join('')+'<p class="hint">Espacio que ocupan: '+fmtSz(bks.reduce(function(s,b){return s+b.size},0))+'. Se guardan solo las últimas 5.</p>':'<p class="hint">Todavía no hay copias guardadas aquí.</p>'}
+function drawBk(){$('bl').innerHTML=bks.length?bks.slice().reverse().map(function(b){return'<div class="row"><b>'+fdate(b.date)+'</b>'+(b.tag?' <span>('+esc(b.tag)+')</span>':'')+'<p>'+nT(b.count)+' - '+fmtSz(b.size)+'</p><div class="r2"><button class="ghost" data-a="rs" data-id="'+b.id+'">Restaurar</button><button class="ghost" data-a="fl" data-id="'+b.id+'">Compartir archivo</button><button class="ghost danger" data-a="dl" data-id="'+b.id+'">Borrar</button></div></div>'}).join('')+'<p class="hint">Espacio que ocupan: '+fmtSz(bks.reduce(function(s,b){return s+b.size},0))+'. Se guardan solo las últimas 5.</p>':'<p class="hint">Todavía no hay copias guardadas aquí.</p>'}
 async function fileBk(j,iso,up){
   var name='respaldo-terrenos-'+iso.slice(0,10)+'.json';
   var file=new File([j],name,{type:'application/json'});
@@ -204,9 +242,9 @@ async function fileBk(j,iso,up){
 }
 async function saveBk(){if(!items.length){toast('No hay terrenos que guardar');return}var j=bkJson(),iso=new Date().toISOString();if(await fileBk(j,iso,true)){await addBk(j,items.length);drawBk()}}
 function valid(o){return o&&Array.isArray(o.items)&&o.items.every(function(t){return t&&typeof t==='object'&&t.name!=null})}
-function ask(o){if(!valid(o)){toast('Ese archivo no es una copia válida');return}pend=o;if(!items.length){doRs('rep');return}$('rst').textContent='La copia tiene '+o.items.length+' terrenos y ahora hay '+items.length+' cargados.';$('rs').classList.add('on')}
-async function doRs(m){var o=pend;if(!o)return;$('rs').classList.remove('on');var inc=o.items.map(function(t){t.photos=t.photos||(t.photo?[t.photo]:[]);if(t.sizeUnit==='varas²')t.sizeUnit='v²';t.id=t.id||Date.now().toString(36)+Math.random().toString(36).slice(2,5);t.created=t.created||Date.now();return t}),msg;if(m==='rep'){if(items.length)await addBk(bkJson(),items.length,'antes de reemplazar');items=inc;msg='Se cargaron '+inc.length+' terrenos'}else{var have=new Set(items.map(function(t){return t.id})),nw=inc.filter(function(t){return !have.has(t.id)});items=items.concat(nw);msg='Se agregaron '+nw.length+' terrenos'+(inc.length>nw.length?' ('+(inc.length-nw.length)+' ya estaban)':'')}pend=null;if(await persist()){render();drawBk();toast(msg)}}
-$('bl').onclick=function(e){var b=e.target,a=b.dataset.a,id=b.dataset.id;if(!a)return;var k=bks.find(function(x){return x.id===id});if(!k)return;if(a==='rs'){try{ask(JSON.parse(k.json))}catch(x){toast('No se pudo leer esa copia')}}else if(a==='fl')fileBk(k.json,k.date,false);else if(a==='dl'){if(!b.dataset.s){b.dataset.s='1';b.textContent='Toca de nuevo';setTimeout(function(){b.dataset.s='';b.textContent='Borrar'},3000);return}bks=bks.filter(function(x){return x.id!==id});kset('backups',bks);drawBk();toast('Copia borrada')}};
+function ask(o){if(!valid(o)){toast('Ese archivo no es una copia válida');return}pend=o;if(!items.length){doRs('rep');return}$('rst').textContent='Esta copia tiene '+nT(o.items.length)+(o.date?' (guardada el '+fdate(o.date)+')':'')+'. Ahora tienes '+nT(items.length)+' cargados.';$('rs').classList.add('on')}
+async function doRs(m){var o=pend;if(!o)return;$('rs').classList.remove('on');var inc=o.items.map(function(t){t.photos=t.photos||(t.photo?[t.photo]:[]);if(t.sizeUnit==='varas²')t.sizeUnit='v²';t.id=t.id||Date.now().toString(36)+Math.random().toString(36).slice(2,5);t.created=t.created||Date.now();return t}),msg;if(m==='rep'){if(items.length)await addBk(bkJson(),items.length,'antes de reemplazar');items=inc;msg='Se cargaron '+nT(inc.length)}else{var have=new Set(items.map(function(t){return t.id})),nw=inc.filter(function(t){return !have.has(t.id)});items=items.concat(nw);msg='Se agregaron '+nT(nw.length)+(inc.length>nw.length?' ('+(inc.length-nw.length)+' ya estaban)':'')}pend=null;if(await persist()){render();drawBk();toast(msg)}}
+$('bl').onclick=function(e){var b=e.target,a=b.dataset.a,id=b.dataset.id;if(!a)return;var k=bks.find(function(x){return x.id===id});if(!k)return;if(a==='rs'){try{ask(JSON.parse(k.json))}catch(x){toast('No se pudo leer esa copia')}}else if(a==='fl')fileBk(k.json,k.date,false);else if(a==='dl'){confirmBox('¿Borrar esta copia?','Se borrará de esta página la copia del '+fdate(k.date)+' ('+nT(k.count)+'). Tus terrenos actuales no cambian, y los archivos que ya guardaste en el celular o en Drive tampoco se borran.','Sí, borrar',function(){bks=bks.filter(function(x){return x.id!==id});kset('backups',bks);drawBk();toast('Copia borrada')})}};
 $('bf').onchange=function(e){var f=e.target.files[0];e.target.value='';if(!f)return;var r=new FileReader();r.onload=function(){try{ask(JSON.parse(r.result))}catch(x){toast('Ese archivo no es una copia válida')}};r.readAsText(f)};
 var pSel=[];
 function ci(){return items.find(function(x){return x.id===cur})}
@@ -253,6 +291,18 @@ async function makePdf(){
   }catch(e){if(e&&e.name==='AbortError')toast('No se compartió el PDF');else toast('No se pudo crear el PDF')}
   b.disabled=false;b.textContent='Descargar o compartir PDF';
 }
+var ARW='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>';
+function drawStats(){
+  var c=[0,0,0,0],fs=$('fs').value,L=['Disponibles','Reservados','En negociación','Vendidos'];
+  items.forEach(function(t){var i=STATES.indexOf(t.state);if(i>-1)c[i]++});
+  $('stats').innerHTML='<button class="tile all'+(fs?'':' on')+'" onclick="qs(\'\')"><b>'+items.length+'</b><span>Terrenos en total</span></button>'+L.map(function(l,i){return'<button class="tile t'+i+(fs===STATES[i]?' on':'')+'" onclick="qs(\''+STATES[i]+'\')"><b>'+c[i]+'</b><span>'+l+'</span></button>'}).join('');
+}
+function qs(s){$('fs').value=($('fs').value===s)?'':s;render()}
+var cfFn=null;
+function confirmBox(t,x,ok,fn){$('cf_t').textContent=t;$('cf_x').textContent=x;$('cf_ok').textContent=ok;cfFn=fn;$('cf').classList.add('on')}
+function cfNo(){$('cf').classList.remove('on');cfFn=null}
+function cfYes(){var f=cfFn;cfNo();if(f)f()}
+function nT(n){return n===1?'1 terreno':n+' terrenos'}
 function togR(){var s=$('f_state').value;$('rsv').hidden=s!=='Reservado'&&s!=='Vendido'}
 function bb(t){if(t.state!=='Reservado'&&t.state!=='Vendido')return'';if(!t.buyer&&!t.bphone&&t.bprice==null)return'';var p=t.bphone?'<a class="tel" href="tel:'+esc(t.bphone.replace(/[^\d+]/g,''))+'">Llamar '+esc(t.bphone)+'</a>':'';return'<div class="rv"><span>'+(t.state==='Vendido'?'Comprador':'Reservado por')+'</span><b>'+esc(t.buyer||'')+'</b>'+(t.bprice!=null?'<div>Precio acordado: <b>'+money(t.bprice)+'</b></div>':'')+p+'</div>'}
 function cover(i){var p=photos.splice(i,1)[0];photos.unshift(p);prev()}
@@ -268,7 +318,7 @@ function render(){
   $('zl').innerHTML=z.map(function(x){return'<option value="'+esc(x)+'">'}).join('');
   var q=$('q').value.toLowerCase().trim(),fz=$('fz').value,ft=$('ft').value,fs=$('fs').value,fo=$('fo').value.toLowerCase().trim(),mn=num($('fmin').value),mx=num($('fmax').value);
   var act=(fz?1:0)+(ft?1:0)+(fs?1:0)+(fo?1:0)+(isNaN(mn)?0:1)+(isNaN(mx)?0:1)+fFeats.size;
-  $('fbd').textContent=act;$('fbd').hidden=!act;remind();
+  $('fbd').textContent=act;$('fbd').hidden=!act;remind();drawStats();
   var list=items.filter(function(t){
     if(q&&t.name.toLowerCase().indexOf(q)<0)return false;
     if(fz&&t.zone!==fz)return false;
@@ -283,29 +333,27 @@ function render(){
   $('list').innerHTML=list.length?list.map(function(t){
     var si=Math.max(0,STATES.indexOf(t.state));
     return'<div class="card" onclick="show(\''+t.id+'\')">'+(t.photos[0]?'<img class="cov" alt="" src="'+t.photos[0]+'">':'<div class="nop">Sin foto</div>')+'<div class="cb"><b>'+esc(t.name)+'</b><span>'+esc([t.zone,t.type].filter(Boolean).join(' - '))+'</span>'+(t.price!=null?'<div class="pr">'+money(t.price)+(t.negoc?' (negociable)':'')+'</div>':'')+(t.state?'<div class="st s'+si+'">'+esc(t.state)+'</div>':'')+'</div></div>'}).join(''):
-    '<div class="empty">'+(items.length?'Ningún terreno coincide con la búsqueda.':'Todavía no hay terrenos. Toca «Agregar terreno» para empezar.')+'</div>';
+    '<div class="empty">'+(items.length?'Ningún terreno coincide con la búsqueda.':'Todavía no hay terrenos. Toca «+ Agregar» para empezar.')+'</div>';
 }
 function show(id){
   var t=items.find(function(x){return x.id===id});if(!t)return;cur=id;
   var row=function(l,v){return v?'<div class="row"><span>'+l+'</span><p>'+esc(v)+'</p></div>':''};
   var tels=(t.phones||'').split(/[\n,;]+/).map(function(s){return s.trim()}).filter(Boolean).map(function(p){return'<a class="tel" href="tel:'+esc(p.replace(/[^\d+]/g,''))+'">Llamar '+esc(p)+'</a>'}).join('');
-  var loc=[t.address,t.zone].filter(Boolean).join(', ');
-  $('det').innerHTML='<div class="in"><button class="ghost" onclick="closeOv()">Volver</button>'+(t.photos.length?'<div class="gal">'+t.photos.map(function(p){return'<img alt="" src="'+p+'">'}).join('')+'</div>':'')+
-    '<h2>'+esc(t.name)+'</h2>'+(t.state?'<div class="st s'+Math.max(0,STATES.indexOf(t.state))+'">'+esc(t.state)+'</div>':'')+
-    (t.price!=null?'<div class="pr" style="font-size:24px">'+money(t.price)+(t.negoc?' (negociable)':'')+'</div>':'')+
-    '<div style="margin-top:10px">'+bb(t)+row('Tipo',t.type)+row('Zona',t.zone)+row('Tamaño',sz(t))+row('Dirección',t.address)+row('Propietario',t.owner)+
-    ((t.feats||[]).length?row('Características',t.feats.join(', ')):'')+
-    (tels?'<div class="row"><span>Teléfonos</span><div>'+tels+'</div></div>':'')+
-    row('Asuntos legales',t.legal)+row('Notas',t.notes)+
-    row('Fecha en que se agregó',new Date(t.created).toLocaleDateString('es-AR',{day:'numeric',month:'long',year:'numeric'}))+'</div>'+
-    '<div class="acts"><div class="r2">'+(t.map?'<a class="map" target="_blank" rel="noopener" href="'+esc(t.map)+'">Ver en Maps</a>':loc?'<a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(loc)+'">Buscar en Maps</a>':'')+
-    '<button class="btn" onclick="openPdf()">Generar PDF</button></div><div class="r2"><button class="ghost" onclick="openForm(\''+id+'\')">Editar</button><button class="ghost danger" onclick="del(this)">Eliminar</button></div></div></div>';
+  var loc=[t.address,t.zone].filter(Boolean).join(', '),si=Math.max(0,STATES.indexOf(t.state));
+  var info=bb(t)+row('Tipo',t.type)+row('Zona',t.zone)+row('Tamaño',sz(t))+row('Dirección',t.address)+row('Propietario',t.owner)+((t.feats||[]).length?row('Características',t.feats.join(', ')):'')+(tels?'<div class="row"><span>Teléfonos</span><div>'+tels+'</div></div>':'')+row('Asuntos legales',t.legal)+row('Notas',t.notes)+row('Fecha en que se agregó',new Date(t.created).toLocaleDateString('es-AR',{day:'numeric',month:'long',year:'numeric'}));
+  var mp=t.map?'<a class="map" target="_blank" rel="noopener" href="'+esc(t.map)+'">Ver en Maps</a>':loc?'<a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(loc)+'">Buscar en Maps</a>':'';
+  $('det').innerHTML='<div class="in"><div class="tb"><button class="back" onclick="closeOv()">'+ARW+' Volver</button></div>'+(t.photos.length?'<div class="gal">'+t.photos.map(function(p){return'<img alt="" src="'+p+'">'}).join('')+'</div>':'')+
+    '<div class="sec" style="margin-top:12px"><h2 style="margin:0">'+esc(t.name)+'</h2>'+(t.state?'<span class="st s'+si+'">'+esc(t.state)+'</span>':'')+(t.price!=null?'<div class="pr big">'+money(t.price)+(t.negoc?' (negociable)':'')+'</div>':'')+'</div>'+
+    '<div class="sec">'+info+'</div>'+
+    '<div class="acts"><div class="r2">'+mp+'<button class="btn" onclick="openPdf()">Generar PDF</button></div><div class="r2"><button class="ghost" onclick="openForm(\''+id+'\')">Editar</button><button class="ghost danger" onclick="del()">Eliminar</button></div></div></div>';
   $('det').classList.add('on');$('det').scrollTop=0;
 }
 function closeOv(){$('det').classList.remove('on');$('frm').classList.remove('on')}
-function del(b){
-  if(!b.dataset.s){b.dataset.s='1';b.textContent='Toca de nuevo';setTimeout(function(){b.dataset.s='';b.textContent='Eliminar'},3000);return}
-  items=items.filter(function(x){return x.id!==cur});persist();closeOv();render();toast('Terreno eliminado');
+function del(){
+  var t=ci();if(!t)return;
+  confirmBox('¿Eliminar este terreno?','Se borrará «'+t.name+'» con todas sus fotos y datos. No se puede deshacer. Si no tienes una copia de seguridad, no podrás recuperarlo.','Sí, eliminar',function(){
+    items=items.filter(function(x){return x.id!==t.id});persist();closeOv();render();toast('Terreno eliminado');
+  });
 }
 function prev(){$('pvs').innerHTML=photos.map(function(p,i){return'<div class="th"><img alt="" src="'+p+'" onclick="cover('+i+')">'+(i?'':'<i>Portada</i>')+'<button type="button" aria-label="Quitar foto" onclick="rmPh('+i+')">×</button></div>'}).join('')}
 function openForm(id){
