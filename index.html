@@ -7,8 +7,8 @@
 <meta name="theme-color" content="#000000">
 <meta name="description" content="Base de terrenos de Comercializadora Caribe">
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
-<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
 <style>
 :root{--bg:#000;--card:#0e0e0e;--line:#2a2a2a;--tx:#fff;--mut:#9b9b9b;--g:#22c55e;--gd:#06280f;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *,*::before,*::after{box-sizing:inherit}
@@ -27,7 +27,7 @@ input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid v
 textarea{min-height:80px;resize:vertical}
 label{color:var(--mut);font-size:15px}
 .bar{display:flex;gap:10px;margin:14px 0 4px}
-.bar input{margin:0;flex:1}.bar .pw{flex:1;min-width:0}.bar .pb{top:7px}.bar .btn{width:auto;white-space:nowrap;padding:0 16px}#q{font-size:16px}#q::-webkit-search-cancel-button{-webkit-appearance:none}.bd{position:absolute;top:-5px;right:-5px;background:var(--g);color:#000;font-size:12px;font-weight:700;border-radius:10px;min-width:18px;height:18px;padding:0 4px;line-height:18px;text-align:center}.hd{display:flex;align-items:flex-start;gap:10px}.hd h1{flex:1}.ib{background:transparent;border:0;color:var(--mut);width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:10px;margin-top:2px}.rem{border:2px solid #f5b942;color:#f5b942;border-radius:12px;padding:10px 12px;margin:0 0 12px;font-size:16px}.hint{color:var(--mut);font-size:15px}#bl .ghost{padding:10px 6px;font-size:16px}
+.bar input{margin:0;flex:1}.bar .pw{flex:1;min-width:0}.bar .pb{top:7px}.bar .btn{width:auto;white-space:nowrap;padding:0 16px}#q{font-size:16px}#q::-webkit-search-cancel-button{-webkit-appearance:none}.bd{position:absolute;top:-5px;right:-5px;background:var(--g);color:#000;font-size:12px;font-weight:700;border-radius:10px;min-width:18px;height:18px;padding:0 4px;line-height:18px;text-align:center}.hd{display:flex;align-items:flex-start;gap:10px}.hd h1{flex:1}.ib{background:transparent;border:0;color:var(--mut);width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:10px;margin-top:2px}.rem{position:relative;border:2px solid #f5b942;color:#f5b942;border-radius:12px;padding:10px 42px 10px 12px;margin:0 0 12px;font-size:16px}.rem-close{position:absolute;right:7px;top:6px;width:30px;height:30px;border:0;border-radius:8px;background:transparent;color:#f5b942;font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center;padding:0}.hint{color:var(--mut);font-size:15px}#bl .ghost{padding:10px 6px;font-size:16px}
 #fp{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
 #fp[hidden]{display:none}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -92,7 +92,7 @@ label{color:var(--mut);font-size:15px}
   <div id="rsv" hidden style="border:2px solid var(--g);border-radius:14px;padding:12px;margin:0 0 14px"><label>Datos del comprador</label><input id="f_buyer" placeholder="Nombre del comprador"><input id="f_bphone" type="tel" inputmode="tel" placeholder="Teléfono del comprador"><input id="f_bprice" type="text" inputmode="numeric" oninput="fmtN(this)" placeholder="Precio acordado" style="margin-bottom:0"></div>
   <label>Características</label><div class="chips" id="fch2"></div>
   <label>Precio</label><div style="display:flex;gap:14px;align-items:center"><input id="f_price" type="text" inputmode="numeric" oninput="fmtN(this)" style="flex:1"><label class="nb" style="display:flex;align-items:center;gap:8px;color:var(--tx);margin-bottom:8px"><input type="checkbox" id="f_neg">Negociable</label></div>
-  <label>Tamaño</label><div style="display:flex;gap:8px"><input id="f_size" type="number" step="any" inputmode="decimal" oninput="sizeIn()" style="flex:1"><select id="f_unit" onchange="unitCh()" style="width:auto"><option>m²</option><option>km²</option><option>v²</option></select></div>
+  <label>Tamaño</label><div style="display:flex;gap:8px"><input id="f_size" type="number" step="any" inputmode="decimal" oninput="sizeIn()" style="flex:1"><select id="f_unit" onchange="unitCh()" style="width:auto"><option value="m²">m²</option><option value="km²">km²</option><option value="v²">v²</option><option value="mnz">Manzanas (mnz)</option><option value="acres">Acres</option></select></div>
   <label>Dirección específica</label><input id="f_address">
   <label>Ubicación exacta: marca el punto en Maps, toca Compartir, copia el enlace y pégalo aquí</label>
   <div style="margin:4px 0"><a class="ghost" id="pk" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps" onclick="pick()" style="display:block;text-align:center;text-decoration:none">Elegir en Maps</a></div>
@@ -132,7 +132,7 @@ var FEATS=['Frente a la CA-13','~500 mts de la CA-13','Salida a Colón','Mar','R
 var STATES=['Disponible','Reservado','En negociación','Vendido'];
 var K=['name','zone','type','state','price','address','map','owner','phones','legal','notes'];
 var items=[];
-var editId=null,cur=null,photos=[],feats=new Set(),fFeats=new Set(),m2=null,uni='m²',F={'m²':1,'km²':1e6,'v²':0.698896};
+var editId=null,cur=null,photos=[],feats=new Set(),fFeats=new Set(),m2=null,uni='m²',F={'m²':1,'km²':1e6,'v²':0.698896,'mnz':6988.96,'acres':4046.8564224};
 var $=function(i){return document.getElementById(i)};
 var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
 var money=function(n){return n==null||isNaN(n)?'':'$ '+Number(n).toLocaleString('es-AR')};
@@ -155,29 +155,52 @@ function bkJson(){return JSON.stringify({app:'terrenos',v:1,date:new Date().toIS
 function fmtSz(n){return n>=1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB'}
 function fdate(s){return new Date(s).toLocaleString('es-AR',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})}
 function addBk(j,n,tag){bks.push({id:Date.now().toString(36),date:new Date().toISOString(),count:n,size:j.length,json:j,tag:tag||''});bks=bks.slice(-5);return kset('backups',bks).catch(function(){toast('No se pudo guardar la copia dentro de la página')})}
-function remind(){var el=$('rem'),lb=0;try{lb=parseInt(localStorage.getItem('lastBk')||'0',10)}catch(e){}if(!items.length||Date.now()-lb<14*864e5){el.hidden=true;return}el.innerHTML='<span>'+(lb?'Hace más de 2 semanas que no guardas una copia de seguridad.':'Aún no has guardado una copia de seguridad.')+'</span><br><button class="ghost" style="margin-top:8px;padding:8px 14px" onclick="saveBk()">Guardar ahora</button>';el.hidden=false}
+function remind(){
+  var el=$('rem'),lb=0,ds=0,now=Date.now(),period=14*864e5;
+  try{lb=parseInt(localStorage.getItem('lastBk')||'0',10);ds=parseInt(localStorage.getItem('remDismiss')||'0',10)}catch(e){}
+  if(!items.length||(lb&&now-lb<period)||(ds&&now-ds<period)){el.hidden=true;return}
+  el.innerHTML='<button class="rem-close" type="button" aria-label="Cerrar aviso" title="Recordármelo en 14 días" onclick="dismissRem()">×</button><span>'+(lb?'Hace más de 2 semanas que no guardas una copia de seguridad.':'Aún no has guardado una copia de seguridad.')+'</span><br><button class="ghost" style="margin-top:8px;padding:8px 14px" onclick="saveBk()">Guardar ahora</button>';
+  el.hidden=false
+}
+function dismissRem(){try{localStorage.setItem('remDismiss',String(Date.now()))}catch(e){}$('rem').hidden=true}
 function openBk(){drawBk();$('bk').classList.add('on');$('bk').scrollTop=0}
 function closeBk(){$('bk').classList.remove('on')}
 function drawBk(){$('bl').innerHTML=bks.length?bks.slice().reverse().map(function(b){return'<div class="row"><b>'+fdate(b.date)+'</b>'+(b.tag?' <span>('+esc(b.tag)+')</span>':'')+'<p>'+b.count+' terrenos - '+fmtSz(b.size)+'</p><div class="r2"><button class="ghost" data-a="rs" data-id="'+b.id+'">Restaurar</button><button class="ghost" data-a="fl" data-id="'+b.id+'">Guardar archivo</button><button class="ghost danger" data-a="dl" data-id="'+b.id+'">Borrar</button></div></div>'}).join('')+'<p class="hint">Espacio que ocupan: '+fmtSz(bks.reduce(function(s,b){return s+b.size},0))+'. Se guardan solo las últimas 5.</p>':'<p class="hint">Todavía no hay copias guardadas aquí.</p>'}
 async function fileBk(j,iso,up){
   var name='respaldo-terrenos-'+iso.slice(0,10)+'.json';
   var file=new File([j],name,{type:'application/json'});
-  try{
-    if(navigator.canShare&&navigator.share&&navigator.canShare({files:[file]})){
-      await navigator.share({files:[file],title:'Copia de seguridad de terrenos',text:'Guarda este archivo en Google Drive.'});
-    }else{
-      var url=URL.createObjectURL(file),a=document.createElement('a');
-      a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
-      setTimeout(function(){URL.revokeObjectURL(url)},1500);
+  var shared=false;
+  if(navigator.share&&navigator.canShare){
+    try{
+      if(navigator.canShare({files:[file]})){
+        await navigator.share({files:[file],title:'Copia de seguridad de terrenos',text:'Guarda este archivo en Google Drive.'});
+        shared=true;
+      }
+    }catch(e){
+      if(e&&e.name==='AbortError'){
+        toast('No se compartió la copia');
+        return false;
+      }
+      // Android/browser share failed: try a direct download below.
     }
-    if(up){try{localStorage.setItem('lastBk',String(Date.now()))}catch(e){}remind()}
-    toast('Copia preparada. Guárdala en Google Drive o en otro lugar seguro.');
-    return true;
-  }catch(e){
-    if(e&&e.name==='AbortError')toast('No se compartió la copia');
-    else toast('No se pudo guardar el archivo');
-    return false;
   }
+  if(!shared){
+    try{
+      var url=URL.createObjectURL(file),a=document.createElement('a');
+      a.href=url;a.download=name;a.style.display='none';document.body.appendChild(a);
+      a.click();
+      setTimeout(function(){a.remove();URL.revokeObjectURL(url)},3000);
+    }catch(e){
+      toast('No se pudo iniciar la descarga. Prueba desde Chrome y revisa los permisos de archivos.');
+      return false;
+    }
+  }
+  if(up){
+    try{localStorage.setItem('lastBk',String(Date.now()));localStorage.removeItem('remDismiss')}catch(e){}
+    remind();
+  }
+  toast(shared?'Copia lista para compartir. Elige Drive u otro destino.':'Descarga iniciada. Busca el archivo en Descargas y súbelo a Drive.');
+  return true;
 }
 async function saveBk(){if(!items.length){toast('No hay terrenos que guardar');return}var j=bkJson(),iso=new Date().toISOString();if(await fileBk(j,iso,true)){await addBk(j,items.length);drawBk()}}
 function valid(o){return o&&Array.isArray(o.items)&&o.items.every(function(t){return t&&typeof t==='object'&&t.name!=null})}
